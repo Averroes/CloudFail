@@ -113,7 +113,7 @@ def crimeflare(target):
         crimeFoundArray = []
         for line in ins:
             lineExploded = line.split(" ")
-            if lineExploded[1] == args.target:
+            if len(lineExploded) > 1 and lineExploded[1] == args.target:
                 crimeFoundArray.append(lineExploded[2])
             else:
                 continue
